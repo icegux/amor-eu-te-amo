@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Para não ter barras de rolagem */
+    background-color: white; /* Fundo branco */
+}
+
+#love-button {
+    background-color: #ff69b4; /* Cor de fundo do botão */
+    color: white; /* Cor do texto do botão */
+    font-size: 40px; /* Tamanho do texto do botão */
+    padding: 20px 40px; /* Espaçamento interno do botão */
+    border: none; /* Sem borda */
+    border-radius: 10px; /* Bordas arredondadas */
+    position: absolute; /* Posicionamento absoluto */
+    top: 50%; /* Centraliza verticalmente */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta a posição para o centro */
+    cursor: pointer; /* Muda o cursor para ponteiro ao passar por cima */
+    z-index: 10; /* Mantém o botão acima dos corações */
+}
+
+#message-container {
+    position: absolute; /* Posicionamento absoluto */
+    top: 70%; /* Coloca mais para baixo na tela */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translateX(-50%); /* Ajusta a posição para o centro */
+    font-size: 30px; /* Tamanho do texto das mensagens */
+    text-align: center; /* Centraliza o texto */
+    color: #ff69b4; /* Cor do texto das mensagens */
+    z-index: 10; /* Mantém as mensagens acima dos corações */
+}
+
+@keyframes rainHearts {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(100vh);
+    }
+}
+
+.rain-heart {
+    position: absolute;
+    font-size: 60px; /* Tamanho do coração de fundo */
+    opacity: 0.8;
+    animation: rainHearts linear infinite;
+}
